@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Sling as Hamburger } from "hamburger-react";
+import { FaBars, FaTimes } from "react-icons/fa";
+import MenuIcon from "@material-ui/icons/Menu";
+import CloseIcon from "@material-ui/icons/Close";
 import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";
 
@@ -46,13 +49,18 @@ const Navbar = () => {
             ULTRA
           </NavLogo>
           <MobileIcon onClick={handleClick}>
-            <Hamburger
+            {click ? (
+              <CloseIcon style={{ color: "#fff", fontSize: 40 }} />
+            ) : (
+              <MenuIcon style={{ color: "#fff", fontSize: 40 }} />
+            )}
+            {/* <Hamburger
               toggled={isOpen}
               toggle={setOpen}
               color="#fff"
               distance="lg"
               size={40}
-            />
+            /> */}
           </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
