@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { FaBars } from "react-icons/fa";
-import { AiOutlineClose } from "react-icons/ai";
 import { Sling as Hamburger } from "hamburger-react";
 import { IconContext } from "react-icons/lib";
 import { Button } from "../../globalStyles";

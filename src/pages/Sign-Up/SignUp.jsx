@@ -1,7 +1,14 @@
 import React from "react";
+import CTA from "../../components/CTA/CTA";
+import { signUpObjOne, signUpObjThree } from "./signUpData";
 
-const SignUp = () => {
-  return <div>sign up</div>;
-};
+function SignUp() {
+  return (
+    <>
+      <CTA {...signUpObjOne} />
+      <CTA {...signUpObjThree} />
+    </>
+  );
+}
 
 export default SignUp;

@@ -1,7 +1,14 @@
 import React from "react";
+import CTA from "../../components/CTA/CTA";
+import { productsObjOne, productsObjTwo } from "./productsData";
 
 const Products = () => {
-  return <div>products</div>;
+  return (
+    <>
+      <CTA {...productsObjOne} />
+      <CTA {...productsObjTwo} />
+    </>
+  );
 };
 
 export default Products;
