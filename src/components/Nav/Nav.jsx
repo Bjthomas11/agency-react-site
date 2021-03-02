@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Sling as Hamburger } from "hamburger-react";
-import { FaBars, FaTimes } from "react-icons/fa";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import { IconContext } from "react-icons/lib";
@@ -22,7 +20,6 @@ import {
 const Navbar = () => {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(false);
-  const [isOpen, setOpen] = useState(false);
 
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
@@ -54,13 +51,6 @@ const Navbar = () => {
             ) : (
               <MenuIcon style={{ color: "#fff", fontSize: 40 }} />
             )}
-            {/* <Hamburger
-              toggled={isOpen}
-              toggle={setOpen}
-              color="#fff"
-              distance="lg"
-              size={40}
-            /> */}
           </MobileIcon>
           <NavMenu onClick={handleClick} click={click}>
             <NavItem>
